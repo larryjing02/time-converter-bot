@@ -39,6 +39,7 @@ async def on_message(message):
 							n_am = "PM"
 						res = f"{hour%12}:{minute} {ampm} HST is equivalent to {nHour%12}:{minute} {n_am} PST"
 					else:
+						# TODO: handle hourly edge cases, refactor into method
 						nHour = (hour - 2)
 						n_am = "AM"
 						if nHour < 0:
